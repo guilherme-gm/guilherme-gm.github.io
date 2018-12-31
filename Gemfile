@@ -7,5 +7,4 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-feed'
     gem 'jekyll-seo-tag'
-    gem 'bootstrap', '~> 4.2.1'
 end
