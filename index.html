@@ -35,7 +35,7 @@ layout: default
 				Laravel </li>
 		</ul>
 		<div class="text-center">
-			<a href="https://ggmenaldo.com/sobre#tech" class="btn btn-primary">Ver Mais</a>
+			<a href="{{ "about" | relateive_url }}" class="btn btn-primary">Ver Mais</a>
 		</div>
 	</div>
 </section>
@@ -44,24 +44,17 @@ layout: default
 		<h3 class="bottom-separator">Meus Últimos Trabalhos</h3>
 		<div class="row main-recent-work">
 			<div class="col-xs-12 col-md-4 text-center">
-				<img width="150" height="150" src="https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-150x150.png"
-					class="attachment-thumbnail default-featured-img" alt="" srcset="https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-150x150.png 150w, https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-100x100.png 100w, https://ggmenaldo.com/wp-content/uploads/2018/08/no-img.png 300w"
-					sizes="(max-width: 150px) 100vw, 150px" /><br />
+				<img width="150" height="150" src="{{ "/assets/images/no-img.png" | relative_url }}" /><br />
 				Sistema RODeX </div>
 			<div class="col-xs-12 col-md-4 text-center">
-				<img width="150" height="150" src="https://ggmenaldo.com/wp-content/uploads/2018/08/ragnarok-united-150x150.png"
-					class="attachment-thumbnail size-thumbnail wp-post-image" alt="" srcset="https://ggmenaldo.com/wp-content/uploads/2018/08/ragnarok-united-150x150.png 150w, https://ggmenaldo.com/wp-content/uploads/2018/08/ragnarok-united-100x100.png 100w"
-					sizes="(max-width: 150px) 100vw, 150px" /><br />
+				<img width="150" height="150" src="{{ "/assets/images/portfolio/ru-web/ruweb.png" | relative_url }}" /><br />
 				Ragnarok United Website </div>
 			<div class="col-xs-12 col-md-4 text-center">
-				<img width="150" height="150" src="https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-150x150.png"
-					class="attachment-thumbnail default-featured-img" alt="" srcset="https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-150x150.png 150w, https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-100x100.png 100w, https://ggmenaldo.com/wp-content/uploads/2018/08/no-img.png 300w"
-					sizes="(max-width: 150px) 100vw, 150px" /><br />
+				<img width="150" height="150" src="{{ "/assets/images/no-img.png" | relative_url }}" /><br />
 				Contribuições Open Source </div>
 		</div>
 		<div class="text-center">
-			<a href="https://ggmenaldo.com/portfolio" class="btn btn-primary">Portfólio
-				Completo</a>
+			<a href="{{ "/portfolio/" | relative_url }}" class="btn btn-primary">Portfólio Completo</a>
 		</div>
 	</div>
 </section>
@@ -71,8 +64,8 @@ layout: default
 		<article class="row">
 			<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4 text-center">
 				<a href="https://ggmenaldo.com/hello-world/"><img width="300" height="300" src="https://ggmenaldo.com/wp-content/uploads/2018/08/no-img.png"
-						class="attachment-medium default-featured-img" alt="" srcset="https://ggmenaldo.com/wp-content/uploads/2018/08/no-img.png 300w, https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-150x150.png 150w, https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-100x100.png 100w"
-						sizes="(max-width: 300px) 100vw, 300px" /></a>
+					 class="attachment-medium default-featured-img" alt="" srcset="https://ggmenaldo.com/wp-content/uploads/2018/08/no-img.png 300w, {{ "/assets/images/no-img.png" | relative_url }} 150w, https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-100x100.png 100w"
+					 sizes="(max-width: 300px) 100vw, 300px" /></a>
 			</div>
 			<div class="col-sm-12 col-md-6 col-lg-7 col-xl-8">
 				<div class="row">
@@ -95,7 +88,7 @@ layout: default
 						<span class='span-reading-time'> 1 </span>
 						min |
 						<span class="tags-links"> <span class="sr-only">Tags</span><span class="badge badge-pill badge-secondary post-tag"><a
-									href="https://ggmenaldo.com/tag/outros/" class="deco-none">outros</a></span>
+								 href="https://ggmenaldo.com/tag/outros/" class="deco-none">outros</a></span>
 						</span> </p>
 				</div>
 			</div>
