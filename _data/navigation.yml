@@ -1,10 +1,10 @@
 - name: Início
   link: /
 - name: Sobre
-  link: /about.html
+  link: /about/
 - name: Portfólio
-  link: /portfolio.html
+  link: /portfolio
 - name: Contato
-  link: /contact.html
+  link: /contact/
 - name: Blog
-  link: /blog.html
+  link: /blog/
