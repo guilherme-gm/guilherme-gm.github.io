@@ -1,0 +1,154 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+
+body {
+	background-color: #f5f5f5;
+}
+
+.container {
+	width: auto;
+	padding: 0 15px;
+}
+
+section.row {
+	margin-top: 40px;
+}
+
+.tecnologies li {
+	width: 150px;
+}
+
+.tecnologies .icon {
+	font-size: 50px;
+}
+
+ul.max-width-list {
+    display: flex;
+    align-items: stretch; /* Default */
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+.max-width-list li {
+    display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+}
+
+.social-icons li {
+	font-size: 35px;
+}
+
+.bottom-separator:after {
+	margin-top: 10px;
+	margin-bottom: 30px;
+	content:' ';
+    display:block;
+	border:1.5px solid black;
+	max-width: 40px;
+}
+
+.main-blog-listing > article {
+	margin-bottom: 20px;
+}
+
+.portfolio > div, .main-recent-work > div {
+	margin-bottom: 15px;
+}
+
+@media(max-width: 575px) {
+	.sm-text-center {
+		text-align: center!important;
+	}
+}
+
+.post-tag {
+	text-transform: capitalize;
+}
+
+.deco-none, .deco-none:link, .deco-none:hover {
+	color: inherit;
+	text-decoration: inherit;
+}
+
+.menu-social-container a, .menu-social-container a:link {
+	color: white;
+}
+
+.menu-social-container a:hover {
+	color: rgb(211, 211, 211);
+}
+
+.post-navigation, #comments, article.type-post {
+    border-radius: 15px;
+    background: white;
+	padding:  30px;
+	padding-bottom: 0.8rem;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.post-navigation {
+	padding-bottom: 3rem;
+	margin-bottom: 20px;
+}
+
+.comments-title {
+	font-size: 1.7rem;
+}
+
+.comment-list, .comment-list ol {
+	list-style: none;
+}
+
+.comment-content {
+	margin-top: 1em;
+}
+
+.comment-author a, .comment-author a:link,
+.comment-metadata > a, .comment-metadata > a:link,
+.main-blog-listing article h4 > a
+{
+	color: black;
+}
+
+.comment-author a:hover, .comment-metadata > a:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+.comment-body {
+	margin-top: 1.2rem;
+}
+
+.reply a, .reply a:link, .reply a:hover {
+	color: white;
+}
+
+.nav-links .nav-next {
+	float: right;
+}
+
+.nav-links .nav-previous {
+	float: left;
+}
+
+.bg-primary, .btn-primary {
+	background-color: #003aff !important
+}
+
+.post-tag > a:hover {
+	text-decoration: underline;
+}
+
+.hov-underline:hover {
+	text-decoration: underline;
+}
+
+#content {
+	margin-bottom: 1.3rem;
+}
