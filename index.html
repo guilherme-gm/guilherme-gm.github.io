@@ -61,40 +61,11 @@ layout: default
 <section>
 	<div class="col-sm-12 main-blog-listing">
 		<h3 class="bottom-separator">Últimos Posts no Blog</h3>
-		<article class="row">
-			<div class="col-sm-12 col-md-6 col-lg-5 col-xl-4 text-center">
-				<a href="https://ggmenaldo.com/hello-world/"><img width="300" height="300" src="https://ggmenaldo.com/wp-content/uploads/2018/08/no-img.png"
-					 class="attachment-medium default-featured-img" alt="" srcset="https://ggmenaldo.com/wp-content/uploads/2018/08/no-img.png 300w, {{ "/assets/images/no-img.png" | relative_url }} 150w, https://ggmenaldo.com/wp-content/uploads/2018/08/no-img-100x100.png 100w"
-					 sizes="(max-width: 300px) 100vw, 300px" /></a>
-			</div>
-			<div class="col-sm-12 col-md-6 col-lg-7 col-xl-8">
-				<div class="row">
-					<div class="col-12">
-						<h4><a href="https://ggmenaldo.com/hello-world/">Hello world!</a> </h4>
-					</div>
-					<div class="col-12">
-						<p class="lead"><a href="https://ggmenaldo.com/hello-world/" class="deco-none hov-underline">Olá!
-								Bem-vindo ao meu blog. Estarei postando relatos e
-								mini-tutoriais relacionados ao que faço, para referência futura
-								e quem sabe ajudar alguém que acabe enfrentando os mesmos
-								problemas. Fique a vontade em escrever sobre dúvidas ou erros
-								em minhas postagens!</a></p>
-					</div>
-				</div>
-				<div class="row mt-3">
-					<p class="text-muted">
-						26/08/2018 |
-						Leia em
-						<span class='span-reading-time'> 1 </span>
-						min |
-						<span class="tags-links"> <span class="sr-only">Tags</span><span class="badge badge-pill badge-secondary post-tag"><a
-								 href="https://ggmenaldo.com/tag/outros/" class="deco-none">outros</a></span>
-						</span> </p>
-				</div>
-			</div>
-		</article>
+		{% for post in site.posts limit:2 %}
+		{% include posts/post_call.html post=post %}
+		{% endfor %}
 		<div class="text-right mb-5">
-			<a href="https://ggmenaldo.com/blog" class="btn btn-primary">Ir para o Blog</a>
+			<a href="{{ "/blog/" | relative_url }}" class="btn btn-primary">Ir para o Blog</a>
 		</div>
 	</div>
 </section>

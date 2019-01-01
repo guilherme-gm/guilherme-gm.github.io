@@ -1,0 +1,6 @@
+{% assign words = {{include.text}} | number_of_words %}
+{% if words < 270 %}
+Leia em <span class='span-reading-time'></270>1</span> minuto
+{% else %}
+Leia em <span class='span-reading-time'>{{ words | divided_by:135 }}</span> minutos
+{% endif %}
