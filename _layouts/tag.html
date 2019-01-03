@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<header class="page-header">
+	<h2 class="page-title bottom-separator">Postagens com a Tag "{{ page.tag | capitalize }}"</h2>
+</header>
+
+<div class="row">
+	<div class="col-sm-12">
+		<div>
+			<main role="main">
+
+
+				{% for post in site.tags[page.tag] %}
+				<article class="tag-outros">
+
+					<div class="main-blog-listing">
+						{% include posts/post_call.html post=post %}
+					</div>
+
+				</article>
+				{% endfor %}
+
+			</main>
+		</div>
+	</div>
+</div>

@@ -21,7 +21,7 @@
 					<span class="sr-only">Tags</span>
 					{% for tag in post.tags %}
 					<span class="badge badge-pill badge-secondary post-tag">
-						<a href="{{ tag.url | relative_url }}" class="deco-none">{{ tag }}</a>
+						<a href="{{ "/blog/tag/" | relative_url }}{{ tag }}" class="deco-none">{{ tag }}</a>
 					</span>
 					{% endfor %}
 				</span>

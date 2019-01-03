@@ -1,0 +1,102 @@
+---
+layout: default
+---
+
+<div class="text-center">
+	<img width="300" height="300" src="{{ include.post.featured | default: "/assets/images/no-img.png" | relative_url }}" />
+</div>
+
+<article class="type-post">
+
+	<header class="entry-header">
+		<h1 class="entry-title">{{ page.title }}</h1>
+		<div class="entry-meta lead ml-2">
+			<span class="posted-on">
+				Postado em <time class="entry-date published" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date:
+					'%d/%m/%Y' }}</time>
+				{% if page.update %}
+				- Última atualização em <time class="updated" datetime="{{ page.update | date_to_xmlschema }}">{{ page.update |
+					date: '%d/%m/%Y às %H:%M' }}</time></a>
+				{% endif %}
+			</span>
+		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content main-blog-listing">
+		{{ page.content }}
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<span class="cat-tags-links">
+			<span class="tags-links">
+				<span class="sr-only">Tags</span>
+				{% for tag in page.tags %}
+				<span class="badge badge-pill badge-secondary post-tag">
+					<a href="{{ "/blog/tag/" | relative_url }}{{ tag }}" class="deco-none">{{ tag }}</a>
+				</span>
+				{% endfor %}
+			</span>
+		</span>
+	</footer> <!-- .entry-footer -->
+</article><!-- #post-## -->
+
+<div id="comments">
+
+	<h2 class="comments-title text-muted">Comentários</h2>
+	{% capture slug %}post-{{ page.id | replace: '/', '-' | remove_first: '-' }}{% endcapture %}
+	<ol class="comment-list">
+		{% for comment in site.data.comments[slug] %}
+		<li class="comment thread-even depth-1">
+			<article class="comment-body">
+				<footer class="comment-meta">
+					<div class="row">
+						<div class="col-auto">
+							<div class="comment-author vcard">
+								<b class="fn">{{ comment | map: "name" }}</b>
+							</div><!-- .comment-author -->
+
+							<div class="comment-metadata">
+								<!-- <a href="https://ggmenaldo.com/hello-world/#comment-2"> -->
+									<time datetime="2019-01-03T12:02:08+00:00">
+										03/01/2019 às 12:02 </time>
+								<!-- </a> -->
+							</div><!-- .comment-metadata -->
+						</div>
+					</div>
+
+
+				</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					{% assign msg = comment | map: "message" %}
+					{% assign msg = msg[1] | markdownify | newline_to_br %}
+					{{ msg }}
+				</div><!-- .comment-content -->
+
+				{% comment %}
+				<div class="btn btn-primary reply"><a rel="nofollow" class="comment-reply-link" href="https://ggmenaldo.com/hello-world/?replytocom=2#respond"
+					 onclick="return addComment.moveForm( &quot;div-comment-2&quot;, &quot;2&quot;, &quot;respond&quot;, &quot;1&quot; )"
+					 aria-label="Responder para Nome teste"><i class="fa fa-chevron-right"></i> Reply</a></div>
+				{% endcomment %}
+			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		{% endfor %}
+	</ol>
+
+	<div id="respond" class="comment-respond">
+		<h3>Comentar</h3>
+		<form action="#" method="post" id="commentform" class="comment-form">
+			<div class="form-group">
+				<label for="comment" class="sr-only">Comentário</label>
+				<textarea id="comment" name="comment" cols="45" rows="8" aria-required="true" class="form-control" placeholder="Comentário"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="author" class="sr-only">Nome</label>
+				<input id="author" name="author" type="text" value="" size="30" class="form-control" placeholder="Nome">
+			</div>
+			<div class="form-submit form-group text-right">
+				<input name="submit" type="submit" id="submit" class="submit btn btn-success" value="Comentar">
+			</div>
+		</form>
+	</div><!-- #respond -->
+</div>
